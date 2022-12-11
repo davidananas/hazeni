@@ -1,7 +1,10 @@
 input.onButtonPressed(Button.A, function () {
     Vstup = "" + Vstup + "A"
 })
-input.onGesture(Gesture.ThreeG, function () {
+input.onButtonPressed(Button.B, function () {
+    Vstup = "" + Vstup + "B"
+})
+input.onGesture(Gesture.Shake, function () {
     neprestan = 0
     basic.showIcon(IconNames.Angry)
     while (neprestan == 0) {
@@ -9,9 +12,6 @@ input.onGesture(Gesture.ThreeG, function () {
         basic.pause(100)
         music.playSoundEffect(music.createSoundEffect(WaveShape.Sine, 5000, 1, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
     }
-})
-input.onButtonPressed(Button.B, function () {
-    Vstup = "" + Vstup + "B"
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     control.reset()
